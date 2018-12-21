@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "semantic-ui";
 html
 {
   height: 100%;
@@ -21,4 +23,8 @@ html
 body
 {
   background-image: url("/assets/background.JPG");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
