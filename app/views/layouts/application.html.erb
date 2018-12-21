@@ -10,11 +10,27 @@
   </head>
 
   <body>
-    <select>
-      <%Category.order(:name).each do |category|%>
-        <option value="<%=category.id%>"><%=category.name%></option>
-      <%end%>
-    </select>
+      <h2 class="ui header">
+      <img src="/assets/logo.png" width="100" height="100">
+        <div class="content">
+          Borealis Project
+          <div class="sub header">A Portfolio by Dylan Vailas</div>
+        </div>
+      </h2>
+
+      <h2 class="ui center aligned icon header">
+        <i class="circular users icon"></i>
+        Borealis Project
+      </h2>
+
+      <div class="ui menu">
+        <div class= "menu">
+          <div class="item"><%= link_to 'Home',root_path%></div>
+          <%Category.order(:name).each do |category|%>
+            <div class="item"><%=link_to category.name, category%></div>
+          <%end%>
+        </div>
+      </div>
     <%= yield %>
   </body>
 </html>
