@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <select>
+      <%Category.order(:name).each do |category|%>
+        <option value="<%=category.id%>"><%=category.name%></option>
+      <%end%>
+    </select>
     <%= yield %>
   </body>
 </html>
