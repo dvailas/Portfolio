@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
   def index
-      @posts = Post.order(:date_created)
+      @posts = Post.order(:created_at)
   end
 end
