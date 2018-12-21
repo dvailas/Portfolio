@@ -1,0 +1,33 @@
+<%if @id == "2"%>
+<div class="four wide column">
+  <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
+</div>
+<%else%>
+<div class="centered item" id="item">
+<% if category.image.present?%>
+  <% if show_link%>
+    <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
+  <%else%>
+    <%= image_tag category.image.url ,alt: "Post"%>
+  <%end%>
+<%end%>
+<div class="content" id="content">
+<%if show_link %>
+    <%= link_to category.title, category,:class =>"header"%>
+  <div class="description">
+        <p><%= category.body %></p>
+      </div>
+<%else%>
+    <b class="header"><%= category.title%></b>
+  <div class="description">
+        <p><%= category.body %></p>
+  </div>
+<%end%>
+  <div class="extra">
+     <p><%= category.created_at%></p>
+  </div>
+  </div>
+</div>
+<%end%>
+
+

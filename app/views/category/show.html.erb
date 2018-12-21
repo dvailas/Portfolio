@@ -1,0 +1,7 @@
+<%if @id == "2"%>
+<div class ="ui grid" id="grid">
+<%else%>
+<div class="ui center aligned items" id="list">
+<%end%>
+  <%= render partial: 'category', collection: @posts, locals: {show_link: false}%>
+</div>

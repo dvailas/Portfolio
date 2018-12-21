@@ -1,5 +1,5 @@
 
-<div class="center aligned item">
+<div class="centered item" id="item">
 
 <% if post.image.present?%>
   <% if show_link%>
@@ -9,23 +9,21 @@
   <%end%>
 <%end%>
 
+<div class="content" id="content">
 <%if show_link %>
-  <div class="content">
     <%= link_to post.title, post,:class =>"header"%>
-  </div>
   <div class="description">
         <p><%= post.body %></p>
       </div>
 <%else%>
-  <div class="content">
     <b class="header"><%= post.title%></b>
-  </div>
   <div class="description">
         <p><%= post.body %></p>
   </div>
 <%end%>
   <div class="extra">
      <p><%= post.created_at%></p>
+  </div>
   </div>
 </div>
 

@@ -30,7 +30,25 @@ body
 }
 #mainMenu
 {
-  align-content: center;
+  margin: auto;
+  width: 90%;
+  opacity: .8 !important;
+  box-shadow: 2px 2px 8px 3px #888888;
+}
+#list
+{
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
-  opacity: .85 !important;
+}
+#grid
+{
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#content
+{
+  margin-left: 5px;
 }
