@@ -1,7 +1,5 @@
 <%if @id == "2"%>
-<div class="four wide column">
-  <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
-</div>
+  <%= image_tag category.image.url(:photo), alt: "Post", :class => "product_image"%>
 <%else%>
 <div class="centered item" id="item">
 <% if category.image.present?%>

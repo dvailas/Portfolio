@@ -23,6 +23,8 @@ html
 body
 {
   background-image: url("/assets/background.JPG");
+  background-color: cyan;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
