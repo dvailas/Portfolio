@@ -18,35 +18,49 @@
 html
 {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
-#home:link
+#mainMenu:link
 {
   text-decoration: none;
 }
 .homeLink{
   color:white;
 }
-#logo{
-  height:50px;
-  width:50px;
-}
 #intro
 {
+  display: block;
   background-image: url("/assets/background.JPG");
-  height:600px;
+  height:750px;
   background-size: cover;
+  box-shadow: 2px 2px 8px 3px #888888;
 }
 #mainMenu
 {
   margin: auto;
   width: 100%;
   box-shadow: 2px 2px 8px 3px #888888;
+  font-family: 'Roboto', sans-serif;
 }
 #list
 {
+  position: relative;
+  width: 80%;
+  top: 600px;
+}
+#photoList
+{
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  top: 600px;
+  background-color: #282828;
+}
+#photoHeading
+{
+
+  left:190px;
+  color: white;
 }
 #grid
 {
@@ -58,4 +72,89 @@ html
 #content
 {
   margin-left: 5px;
+}
+#indexHeaderContent
+{
+  position: relative;
+  display: block;
+  left: 200px;
+  top: 15px;
+}
+#indexTitle
+{
+  font-family: 'Source Serif Pro', serif;
+  letter-spacing: 5px;
+  font-size: 50px;
+  color: white;
+}
+#indexSubTitle
+{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: 2px;
+}
+#indexBody
+{
+  position: relative;
+  top:300px;
+  width: 450px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+footer
+{
+  display: block;
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:150px;
+  clear: both;
+  background: #1B1C1D;
+}
+#footerContent
+{
+  position: relative;
+  width: 80%;
+  left:190px;
+}
+footer a img{
+  position: relative;
+  top: 25px;
+}
+footer nav{
+  position: relative;
+  left: 110px;
+  bottom: 50px;
+}
+footer nav ul{
+  list-style: none;
+}
+footer nav h4{
+  font-size: 20px;
+}
+footer nav ul li{
+  display: inline;
+}
+footer nav ul li{
+  font-size: 16px;
+}
+footer nav ul li:after{
+    content: ' |';
+    color: white;
+}
+footer nav ul li:last-child:after{
+  content: '';
+}
+footer nav ul li a:link{
+  color:white;
+  text-decoration: none;
+}
+footer nav ul li a:hover{
+
+}
+footer nav ul li a:active{
+
 }

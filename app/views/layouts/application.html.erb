@@ -6,17 +6,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Serif+Pro" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header>
-
-
       <div class="ui center aligned inverted menu" id="mainMenu">
         <div class= "menu">
           <div class="item" id="home"><a href ="/">
-            <img src="/assets/logo.png" width="100" height="100" id="logo">
+            <img src="/assets/logo.png" width="50" height="50" >
             </a>
           </div>
           <%Category.order(:name).each do |category|%>
@@ -26,5 +25,18 @@
       </div>
     </header>
     <%= yield %>
+    <footer>
+      <div id ="footerContent">
+        <a href ="/"><img src="/assets/logo.png" width="75" height="75" ></a>
+        <nav>
+          <h4>More content at:</h4>
+          <ul>
+            <li><a href=#>GitHub</a></li>
+            <li><a href=#>Youtube</a></li>
+            <li><a href=#>Instagram</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
