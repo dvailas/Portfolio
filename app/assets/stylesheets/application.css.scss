@@ -39,26 +39,28 @@ html
 {
   margin: auto;
   width: 100%;
-  box-shadow: 2px 2px 8px 3px #888888;
   font-family: 'Roboto', sans-serif;
 }
 #list
 {
-  position: relative;
-  width: 80%;
-  top: 600px;
+  width: 85%;
+  margin: auto;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 #photoList
 {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  top: 600px;
-  background-color: #282828;
+  margin-top:10px;
+  background-color:#001b36;
+  box-shadow: 2px 2px 8px 3px #888888;
+}
+#photoList > div{
+  width: 85%;
+  margin: auto;
 }
 #photoHeading
 {
-
+  padding-top:10px;
   left:190px;
   color: white;
 }
@@ -67,7 +69,7 @@ html
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 85%;
 }
 #content
 {
@@ -76,8 +78,9 @@ html
 #indexHeaderContent
 {
   position: relative;
+  margin: auto;
   display: block;
-  left: 200px;
+  width:85%;
   top: 15px;
 }
 #indexTitle
@@ -105,20 +108,18 @@ html
 footer
 {
   display: block;
-  position: fixed;
   font-family: 'Roboto', sans-serif;
   left: 0;
   bottom: 0;
   width: 100%;
   height:150px;
-  clear: both;
   background: #1B1C1D;
 }
 #footerContent
 {
   position: relative;
-  width: 80%;
-  left:190px;
+  width: 85%;
+  left:100px;
 }
 footer a img{
   position: relative;
