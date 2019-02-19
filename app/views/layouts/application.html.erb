@@ -10,31 +10,21 @@
   </head>
 
   <body>
-      <h2 class="ui center aligned header">
-      <img src="/assets/logo.png" width="100" height="100">
-        <div class="content">
-          Borealis Project
-          <div class="sub header">A Portfolio by Dylan Vailas</div>
-          <div class="ui inline dropdown">
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="header">Adjust time span</div>
-              <div class="active item" data-text="today">Today</div>
-              <div class="item" data-text="this week">This Week</div>
-              <div class="item" data-text="this month">This Month</div>
-            </div>
-          </div>
-        </div>
-      </h2>
+    <header>
+
 
       <div class="ui center aligned inverted menu" id="mainMenu">
         <div class= "menu">
-          <div class="item"><%= link_to 'Home',root_path%></div>
+          <div class="item" id="home"><a href ="/">
+            <img src="/assets/logo.png" width="100" height="100" id="logo">
+            </a>
+          </div>
           <%Category.order(:name).each do |category|%>
             <div class="item"><%=link_to category.name, category%></div>
           <%end%>
         </div>
       </div>
+    </header>
     <%= yield %>
   </body>
 </html>

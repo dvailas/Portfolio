@@ -18,23 +18,28 @@
 html
 {
   height: 100%;
-
 }
-body
+#home:link
+{
+  text-decoration: none;
+}
+.homeLink{
+  color:white;
+}
+#logo{
+  height:50px;
+  width:50px;
+}
+#intro
 {
   background-image: url("/assets/background.JPG");
-  background-color: cyan;
-  background-blend-mode: multiply;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  height:600px;
   background-size: cover;
 }
 #mainMenu
 {
   margin: auto;
-  width: 90%;
-  opacity: .8 !important;
+  width: 100%;
   box-shadow: 2px 2px 8px 3px #888888;
 }
 #list
