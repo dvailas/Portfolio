@@ -1,4 +1,4 @@
-<%if @id == "1"%>
+<%if @id == "1" || @categoryClicked.parent_id == "1"%>
   <%= image_tag category.image.url(:photo), alt: "Post", :class => "product_image"%>
 <%else%>
 <div class="centered item" id="item">
@@ -6,7 +6,7 @@
   <% if show_link%>
     <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
   <%else%>
-    <%= image_tag category.image.url ,alt: "Post"%>
+    <%= image_tag category.image.url(:medium) ,alt: "Post"%>
   <%end%>
 <%end%>
 <div class="content" id="content">
