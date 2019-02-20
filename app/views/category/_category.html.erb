@@ -1,31 +1,34 @@
 <%if @id == "1" || @categoryClicked.parent_id == "1"%>
   <%= image_tag category.image.url(:photo), alt: "Post", :class => "product_image"%>
 <%else%>
-<div class="centered item" id="item">
-<% if category.image.present?%>
-  <% if show_link%>
-    <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
-  <%else%>
-    <%= image_tag category.image.url(:medium) ,alt: "Post"%>
+  <div class="centered item" id="item">
+  <% if category.image.present?%>
+    <% if show_link%>
+      <%= image_tag category.image.url(:medium), alt: "Post", :class => "product_image"%>
+    <%else%>
+      <%= image_tag category.image.url(:medium) ,alt: "Post"%>
+    <%end%>
   <%end%>
-<%end%>
-<div class="content" id="content">
-<%if show_link %>
+  <%if  @id == "1" || @categoryClicked.parent_id == "1"%>
+  <%else%>
+  <div class="content" id="content">
+  <%if show_link%>
     <%= link_to category.title, category,:class =>"header"%>
-  <div class="description">
+    <div class="description">
         <p><%= category.body %></p>
-      </div>
-<%else%>
+    </div>
+  <%else%>
     <b class="header"><%= category.title%></b>
-  <div class="description">
+    <div class="description">
         <p><%= category.body %></p>
-  </div>
-<%end%>
+    </div>
+  <%end%>
   <div class="extra">
      <p><%= category.created_at%></p>
   </div>
   </div>
-</div>
+  </div>
+  <%end%>
 <%end%>
 
 
