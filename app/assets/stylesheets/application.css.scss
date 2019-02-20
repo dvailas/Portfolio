@@ -159,3 +159,25 @@ footer nav ul li a:hover{
 footer nav ul li a:active{
 
 }
+.evenCategory
+{
+  margin-top: 10px;
+}
+.oddCategory
+{
+  background-color:#001b36;
+  width: 100%;
+  margin:auto;
+  margin-top: 5px;
+  box-shadow: 2px 2px 8px 3px #888888;
+}
+.oddCategory div > h3
+{
+  padding-top: 10px;
+  color: white;
+}
+.pictureContent
+{
+  width:85%;
+  margin:auto;
+}

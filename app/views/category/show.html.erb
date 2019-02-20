@@ -1,7 +1,16 @@
 <%if @id == "1"%>
-<div class ="ui small images" id="grid">
+<div class ="ui small images">
+<%Category.where("id IN (" + @categories.ids.join(",") + ")").each do |cat|%>
+  <div class="<% if @count % 2 == 0 %>evenCategory<%else%>oddCategory<%end%>">
+    <div class="pictureContent">
+      <h3><%= cat.name%></h3>
+      <%= render partial: 'category', collection: @posts.where("category_id = " + cat.id.to_s()), locals: {show_link: false}%>
+      <%= @count += 1%>
+    </div>
+  </div>
+<%end%>
 <%else%>
 <div class="ui center aligned items" id="list">
-<%end%>
   <%= render partial: 'category', collection: @posts, locals: {show_link: false}%>
+<%end%>
 </div>
