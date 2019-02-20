@@ -5,11 +5,11 @@
     <p id="indexBody">A journal of my experiences learning and developing my skills and understanding of concepts in Computer Science, Programming, Photography, Game Development, and what ever else I am interested in at the time.</p>
   </div>
 </div>
-  <div class="ui center aligned items" id="list">
+  <div class="ui center aligned items" id="list" data-aos="fade-up">
     <h3>Recent Posts</h3>
     <%= render partial: '/post/post', collection: @posts, locals: {show_link: true}%>
   </div>
-  <div id ="photoList">
+  <div id ="photoList" >
     <div>
     <h3 id="photoHeading">Recent Photos</h3>
     <%= render partial: '/post/post', collection: @posts, locals: {show_link: true}%>

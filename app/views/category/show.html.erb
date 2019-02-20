@@ -5,7 +5,7 @@
 <%Category.where("id IN (" + @categories.ids.join(",") + ")").each do |cat|%>
   <div class="<% if @count % 2 == 0 %>evenCategory<%else%>oddCategory<%end%>">
     <div class="pictureContent">
-      <h3><%=link_to cat.name, cat%></h3>
+      <h3 class="<% if @count % 2 == 0 %>evenHeader<%else%>oddHeader<%end%>"><%=link_to cat.name, cat%></h3>
       <%= render partial: 'category', collection: @posts.where("category_id = " + cat.id.to_s()), locals: {show_link: false}%>
       <% @count += 1%>
     </div>
@@ -16,7 +16,7 @@
 <%Category.where("id IN (" + @categories.ids.join(",") + ")").each do |cat|%>
   <div class="<% if @count % 2 == 0 %>evenCategory<%else%>oddCategory<%end%>">
     <div class="pictureContent">
-    <h3><%=link_to cat.name, cat%></h3>
+    <h3 class="<% if @count % 2 == 0 %>evenHeader<%else%>oddHeader<%end%>"><%=link_to cat.name, cat%></h3>
         <%= render partial: 'category', collection: @posts.where("category_id = " + cat.id.to_s()), locals: {show_link: false}%>
         <% @count += 1%>
       </div>
