@@ -211,3 +211,14 @@ footer nav ul li a:active{
 {
   color: white;
 }
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 0;
+  transition-property: opacity,transform !important;
+  transition-duration: .4s !important;
+}
+.aos-animate
+{
+  transition-property: opacity,transform !important;
+  transition-timing-function: ease !important;
+  transition-duration: .4s !important;
+}
