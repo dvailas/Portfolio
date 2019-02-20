@@ -1,29 +1,31 @@
 
 <div class="centered item" id="item" data-aos="fade-up" data-aos-duration="1000">
-<% if post.image.present?%>
-  <% if show_link%>
-    <%= image_tag post.image.url(:medium), alt: "Post", :class => "product_image"%>
-  <%else%>
-    <%= image_tag post.image.url ,alt: "Post"%>
+  <%if post.image.present?%>
+    <% if show_link%>
+      <%= image_tag post.image.url(:medium), alt: "Post", :class => "product_image"%>
+    <%else%>
+      <%= image_tag post.image.url ,alt: "Post"%>
+    <%end%>
   <%end%>
-<%end%>
-
-<div class="content" id="content">
-<%if show_link %>
-    <%= link_to post.title, post,:class =>"header"%>
-  <div class="description">
-        <p><%= post.body %></p>
+  <div class="content" id="content">
+    <% if !is_photo%>
+      <%if show_link %>
+        <%= link_to post.title, post,:class =>"header"%>
+        <div class="description">
+          <p><%= post.body %></p>
+        </div>
+      <%else%>
+        <b class="header"><%= post.title%></b>
+        <div class="description">
+          <p><%= post.body %></p>
+        </div>
+      <%end%>
+      <div class="extra">
+        <p><%= post.created_at%></p>
       </div>
-<%else%>
-    <b class="header"><%= post.title%></b>
-  <div class="description">
-        <p><%= post.body %></p>
-  </div>
-<%end%>
-  <div class="extra">
-     <p><%= post.created_at%></p>
-  </div>
+    <%end%>
   </div>
 </div>
+
 
 
