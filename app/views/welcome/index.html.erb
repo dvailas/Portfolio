@@ -10,7 +10,7 @@
     <%= render partial: '/post/post', collection: @posts, locals: {show_link: true,  is_photo: false}%>
   </div>
   <div id ="photoList" >
-    <div>
+    <div class="row" >
     <h3 id="photoHeading">Recent Photos</h3>
     <%= render partial: '/post/post', collection: @picturePosts, locals: {show_link: true, is_photo: true}%>
     </div>
